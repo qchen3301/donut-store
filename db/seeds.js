@@ -37,9 +37,9 @@ const dholes = new Donut({
     qty: 23
 })
 
-User.deleteMany()
+Donut.deleteMany()
     .then(()=> {
-        return User.insertMany([sprinkles, plainDonut, chocolate, dholes])
+        return Donut.insertMany([sprinkles, plainDonut, chocolate, dholes])
     })
     .then((data) => {
         console.log(data)
