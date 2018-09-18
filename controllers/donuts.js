@@ -22,7 +22,9 @@ router.get('/', (req,res) => {
 // NEW
 //======================
 // Create a GET new route "/new" that renders the new.hbs form
-
+router.get('/new', (req, res) => {
+    res.render('donuts/new')
+})
 
 
 //======================
@@ -35,8 +37,6 @@ router.get('/:id', (req, res) => {
         res.render('donuts/show', { donut})
     })
 })
-
-
 
 //======================
 // CREATE
@@ -74,3 +74,4 @@ router.get('/:id', (req, res) => {
 // EXPORTS
 //======================
 // export router with module.exports
+module.exports = router;
